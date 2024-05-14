@@ -1,0 +1,27 @@
+# Dependencias instaladas
+/node_modules
+
+# Archivos de configuración locales
+.env.local
+.env
+
+# Archivos de registro y salida
+logs
+*.log
+npm-debug.log*
+
+# Archivos de respaldo
+*.bak
+*.swp
+
+# Archivos de compilación
+/build
+/dist
+
+# Dependencias específicas del entorno de desarrollo
+.DS_Store
+.idea
+.vscode
+
+# Archivos de caché generados automáticamente
+.cache
