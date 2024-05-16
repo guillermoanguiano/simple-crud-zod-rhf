@@ -15,6 +15,11 @@ const teachersSchema = new Schema({
     required: true,
     trim: true,
   },
+  password: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   students: [
     {
       type: Schema.Types.ObjectId,
@@ -26,3 +31,5 @@ const teachersSchema = new Schema({
     default: Date.now,
   },
 });
+
+export default model("teachers", teachersSchema)

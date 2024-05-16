@@ -12,11 +12,13 @@ const studentSchema = new Schema({
     },
     email: {
         type: String,
+        unique: true,
         required: true,
         trim: true
     },
     registrationNumber: {
         type: Number,
+        unique: true,
         required: true
     },
     teacher: {

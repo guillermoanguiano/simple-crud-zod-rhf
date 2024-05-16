@@ -5,12 +5,14 @@ import config from "./config.js";
 import connectDB from "./db.js";
 import routes from "./routes/index.js";
 
+// Aqui se inicia el servidor y se pone la configuracion basica
 const app = express();
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
+
+// Conexión a la base de datos
 connectDB()
   .then(() => {
     app.listen(config.PORT, () => {
@@ -21,7 +23,7 @@ connectDB()
     console.log(error);
   });
 
-// Routes
+// Rutas
 app.use("/api", routes);
 
 export default app;
