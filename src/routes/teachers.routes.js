@@ -9,7 +9,7 @@ const router = Router();
 
 // POST /teachers/auth
 router.post(
-  "/auth",
+  "/login",
   ...validateRequiredFields(["email", "password"]),
   handleValidationErrors,
   TeachersController.loginTeacher
